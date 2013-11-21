@@ -1,0 +1,32 @@
+{
+	"name": "radio_button",
+	"title": "Radio Button",
+	"description": "Get in control of the radio button's appearance.",
+	"keywords": [
+		"form",
+		"radio",
+		"input",
+		"button",
+		"custom",
+		"fake",
+		"style"
+	],
+	"version": "1.0",
+	"author": {
+		"name": "Adam L",
+		"email": "frontend.zorro@gmail.com",
+		"url" : "https://github.com/adam-l/"
+	}
+	"licenses": [
+		{
+			"type": "MIT",
+			"url": "http://opensource.org/licenses/MIT/"
+		}
+	],
+	"homepage": "https://github.com/adam-l/radio_button",
+	"docs": "https://github.com/adam-l/radio_button",
+	"download": "https://github.com/adam-l/radio_button",
+	"dependencies": {
+		"jquery": ">=1.5"
+	}
+}
