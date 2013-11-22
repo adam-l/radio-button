@@ -157,11 +157,7 @@ RadioButton.prototype = {
 	}
 };
 
-(function() {
-	if (typeof jQuery === 'undefined') {
-		return;
-	}
-
+if (typeof jQuery != 'undefined') {
 	jQuery.fn.radioButton = function() {
 		this.each(function() {
 			return new RadioButton(this);
@@ -169,4 +165,4 @@ RadioButton.prototype = {
 
 		return this;
 	};
-}());
+}
