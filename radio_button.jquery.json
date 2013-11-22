@@ -23,9 +23,9 @@
 			"url": "http://opensource.org/licenses/MIT/"
 		}
 	],
-	"homepage": "https://github.com/adam-l/radio_button",
-	"docs": "https://github.com/adam-l/radio_button",
-	"download": "https://github.com/adam-l/radio_button",
+	"homepage": "https://github.com/adam-l/radio-button",
+	"docs": "https://github.com/adam-l/radio-button",
+	"download": "https://github.com/adam-l/radio-button",
 	"dependencies": {
 		"jquery": ">=1.5"
 	}
