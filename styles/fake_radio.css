@@ -1,6 +1,0 @@
-/* Fake form fields */
-*+.fake-radio,
-.fake-radio+* {margin-left: 4px}
-.fake-radio {display: inline-block; width: 17px; height: 17px; vertical-align: middle; background: url('../images/fake_radio_17x17.png') no-repeat; cursor: pointer; text-indent: -99em}
-.fake-radio.active {background-position: 0 -17px; cursor: default}
-.lt-ie8 .fake-radio {display: block; overflow: hidden; float: left; margin: 2px 0 0 0}
