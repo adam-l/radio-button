@@ -1,0 +1,32 @@
+{
+	"name": "radio-button",
+	"title": "Radio Button",
+	"description": "Radio button plugin allows you to customize the appearance of radio button elements.",
+	"keywords": [
+		"form",
+		"radio",
+		"input",
+		"button",
+		"custom",
+		"fake",
+		"style"
+	],
+	"version": "1.1.2",
+	"author": {
+		"name": "Adam L",
+		"email": "frontend.zorro@gmail.com",
+		"url" : "https://github.com/adam-l/"
+	},
+	"licenses": [
+		{
+			"type": "MIT",
+			"url": "http://opensource.org/licenses/MIT/"
+		}
+	],
+	"homepage": "https://github.com/adam-l/radio-button",
+	"docs": "https://github.com/adam-l/radio-button",
+	"download": "https://github.com/adam-l/radio-button",
+	"dependencies": {
+		"jquery": ">=1.5"
+	}
+}
