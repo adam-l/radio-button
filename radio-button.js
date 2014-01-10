@@ -7,6 +7,8 @@
  * Browser support is IE6+ and all modern browsers.
  * Can be used with jQuery or as stand-alone script.
  *
+ * Requires: Bind Event Handler (https://github.com/adam-l/bind-event-handler)
+ *
  * Usage examples:
  *		1) jQuery(':radio').radioButton();
  *		2) new RadioButton(element);
@@ -14,9 +16,10 @@
  * Licensed under the MIT license
  *
  * @author frontend.zorro@gmail.com
+ * @requires bindEventHandler
  * @constructor
  * @param {Object} element The <input /> element for which the <span /> will be created
- * @return {FakeRadio} The new FakeRadio object
+ * @return {RadioButton} The new RadioButton object
  */
 function RadioButton(element) {
 
@@ -32,24 +35,16 @@ function RadioButton(element) {
 	this.fake = this.createFake();
 	this.form = this.getClosestForm(element);
 
-	var self = this;
+	var self = this,
+		handler = function() {self.update.call(self)};
 
 	if (element.checked) {
 		this.fake.className = this.class_name + ' active';
 	}
 
 	// Binding the event handlers
-	this.element.onclick = this.fake.onclick = function() {
-
-		// Prevent event bubbling
-		if (event.stopPropagation) {
-			event.stopPropagation();
-		} else { // fallback for old versions of Internet Explorer
-			event.cancelBubble = true;
-		}
-
-		self.update();
-	};
+	bindEventHandler(this.element, 'click', handler);
+	bindEventHandler(this.fake, 'click', handler);
 
 	return {
 		'element': this.element,
@@ -75,7 +70,7 @@ RadioButton.prototype = {
 	/**
 	 * Creates a <span /> element representing the radio button
 	 * 
-	 * @return {object} element The newly created <span />
+	 * @returns {object} element The newly created <span />
 	 */
 	createFake: function() {
 		var element = this.element
@@ -94,7 +89,7 @@ RadioButton.prototype = {
 	 * Recursively search up the DOM tree for the nearest <form /> element
 	 *
 	 * @param {object} element The given <input /> element
-	 * @return {object} element Closest <form /> element
+	 * @returns {object} element Closest <form /> element
 	 */
 	getClosestForm: function(element) {
 		if (element.nodeName === "FORM") {
@@ -108,7 +103,7 @@ RadioButton.prototype = {
 	 * Looks at the closest form element and searchs for
 	 * all radio buttons with the specific name attribute
 	 * 
-	 * @return {array} elements Array containg the radio buttons
+	 * @returns {array} elements Array containg the radio buttons
 	 */
 	getRadioByName: function() {
 		var elements = [],
