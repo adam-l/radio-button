@@ -43,8 +43,13 @@ function RadioButton(element) {
 	}
 
 	// Binding the event handlers
-	bindEventHandler(this.element, 'click', handler);
-	bindEventHandler(this.fake, 'click', handler);
+	//bindEventHandler(this.element, 'click', handler);
+
+	this.element.attachEvent('onclick', handler);
+
+
+	//bindEventHandler(this.fake, 'click', handler);
+	this.fake.attachEvent('onclick', handler)
 
 	return {
 		'element': this.element,
@@ -61,7 +66,7 @@ RadioButton.prototype = {
 	 */
 	validateElement: function(element) {
 		if (element.nodeName != "INPUT") {
-			throw new Error('Expected element name is <input />.');
+			throw new Error('Expected an <input /> element.');
 		} if (element.getAttribute('type') != 'radio') {
 			throw new Error('Expected value for "type" attribute is "radio" or "checkbox"');
 		}
