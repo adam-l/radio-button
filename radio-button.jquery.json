@@ -1,7 +1,7 @@
 {
 	"name": "radio-button",
 	"title": "Radio Button",
-	"description": "Radio button plugin allows you to customize the appearance of radio button elements.",
+	"description": "Change the default appearance of radio button elements.",
 	"keywords": [
 		"form",
 		"appearance",
