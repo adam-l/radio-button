@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<!--[if lt IE 8]>    <html class="lt-ie8"> <![endif]-->
+<!--[if gte IE 8]><!--><html>         <!--<![endif]-->
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8">
+		<title>Fake radio buttons - Unit tests</title>
+		<link rel="stylesheet" href="styles/buster-test.css">
+		<link rel="stylesheet" href="styles/radio-button.css">
+		<style type="text/css">
+			body {font-family: 'Arial'}
+			.wrapper {max-width: 960px; padding: 40px 0; margin: 0 auto}
+		</style>
+	</head>
+	<body>
+		<div class="wrapper">
+			<form>
+				<p><input type="radio" id="male" name="sex" value="male"><label for="male">Male</label></p>
+				<p><input type="radio" id="female" name="sex" value="female" checked><label for="female">Female</label></p>
+			</form>
+		</div>
+
+		<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+		<script src="scripts/buster.js"></script>
+		<script src="scripts/bind-event-handler.js"></script>
+		<script src="scripts/radio-button.js"></script>
+		<script>
+			//jQuery(':radio').radioButton();
+		</script>
+		<script src="scripts/test.js"></script>
+	</body>
+</html>
